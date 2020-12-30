@@ -26,6 +26,8 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'info', 'error'] }],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/prop-types': 'off',
