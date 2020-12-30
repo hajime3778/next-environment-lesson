@@ -28,7 +28,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'no-restricted-imports': ['error', { paths: [{ name: 'react', importNames: ['default'] }] }],
+    'react/prop-types': 'off',
+    // 'no-restricted-imports': ['error', { paths: [{ name: 'react', importNames: ['default'] }] }],
     'react/react-in-jsx-scope': 0,
     'jsx-a11y/anchor-is-valid': [
       'error',
