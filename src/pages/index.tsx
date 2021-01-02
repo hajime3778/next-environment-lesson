@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const Title = styled.h1`
-  color: red;
-`;
+import { Layout } from 'src/components/Layout';
 
 export default function Home() {
-  return <Title>Title</Title>;
+  return (
+    <Layout title="Title" visibleRegister={true}>
+      <div>div</div>
+    </Layout>
+  );
 }

@@ -12,8 +12,8 @@ const StyledButton = styled.a<ButtonStyleProps>`
   ${(props: ButtonStyleProps) =>
     props.primary
       ? css`
-          color: white;
-          background-color: #1ea7fd;
+          color: #ffffff;
+          background-color: #5cc974;
         `
       : css`
           color: #333;

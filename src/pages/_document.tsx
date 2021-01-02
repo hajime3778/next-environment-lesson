@@ -1,18 +1,8 @@
-/* pages/_document.tsx */
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-/* 
-  カスタムドキュメント
-  ※ サーバーサイド側 (Node.js側) でのみ実行される。
-  ※ https://nextjs.org/docs/#custom-document
-*/
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: any) {
-    // styled-componentsをサーバーサイドレンダリング
-    // 詳細は下記を参照してください。
-    // https://www.styled-components.com/docs/advanced#server-side-rendering
-
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
     ctx.renderPage = () =>
