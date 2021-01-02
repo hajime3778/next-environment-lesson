@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering Matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Layout__Contents-sc-1lp7j94-0 dkiwWK"
+  >
+    <header>
+      <h1
+        class="Header__Title-sc-1sdc6nh-0 enaHpz"
+      >
+        Title 
+      </h1>
+    </header>
+    <main>
+      <p>
+        sample string
+      </p>
+    </main>
+  </div>
+</DocumentFragment>
+`;

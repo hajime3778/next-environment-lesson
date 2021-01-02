@@ -2,6 +2,16 @@ import { render, screen } from '@testing-library/react';
 import { Layout } from 'src/components/Layout';
 
 describe('Rendering', () => {
+  it('Matches snapshot', () => {
+    const { asFragment } = render(
+      <Layout title="Title">
+        <p>sample string</p>
+      </Layout>,
+      {}
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('Should render title and child only', () => {
     render(
       <Layout title="Title">
@@ -12,6 +22,7 @@ describe('Rendering', () => {
     expect(screen.getByText('sample string')).toBeTruthy();
     expect(screen.queryByText('+')).toBeNull();
   });
+
   it('Should render register button and child', () => {
     render(
       <Layout title="Title" visibleRegister={true}>
