@@ -1,4 +1,3 @@
-// import '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { Header } from 'src/components/Header';
 
