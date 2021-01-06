@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import type { AppProps } from 'next/app';
+import { TodoListProvider } from 'src/context/TodoContext';
 
 export const GlobalStyle = createGlobalStyle`
   html,
@@ -31,9 +32,11 @@ const BasicLayout = ({ children }: { children: any }) => {
 
 const MyApp = (props: AppProps) => {
   return (
-    <BasicLayout>
-      <props.Component {...props.pageProps} />
-    </BasicLayout>
+    <TodoListProvider>
+      <BasicLayout>
+        <props.Component {...props.pageProps} />
+      </BasicLayout>
+    </TodoListProvider>
   );
 };
 
