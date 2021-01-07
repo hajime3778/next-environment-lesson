@@ -30,9 +30,27 @@ const BasicLayout = ({ children }: { children: any }) => {
   );
 };
 
+const todoListSampleData = [
+  {
+    id: 0,
+    title: 'Sample title1',
+    description: 'Sample description1',
+  },
+  {
+    id: 1,
+    title: 'Sample title2',
+    description: 'Sample description2',
+  },
+  {
+    id: 2,
+    title: 'Sample title3',
+    description: 'Sample description3',
+  },
+];
+
 const MyApp = (props: AppProps) => {
   return (
-    <TodoListProvider>
+    <TodoListProvider initTodoList={todoListSampleData}>
       <BasicLayout>
         <props.Component {...props.pageProps} />
       </BasicLayout>
