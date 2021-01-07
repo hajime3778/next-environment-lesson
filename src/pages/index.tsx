@@ -10,15 +10,7 @@ export default function Home() {
   return (
     <Layout title="Title" visibleRegister={true}>
       {todoList.map((todo) => {
-        return (
-          <TodoItem
-            todo={todo}
-            key={todo.id}
-            onClick={() => {
-              router.push('/[id]', `/${todo.id}`);
-            }}
-          />
-        );
+        return <TodoItem todo={todo} key={todo.id} onClick={() => router.push(`/${todo.id}`)} />;
       })}
     </Layout>
   );

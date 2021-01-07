@@ -7,13 +7,12 @@ export default function TodoEdit() {
   const router = useRouter();
   const id = parseInt(router.query.id as string);
   const { todoList } = useContext(TodoListContext);
-
   const todo = todoList.find((todo) => todo.id === id);
 
   return (
     <Layout title="TodoEdit">
-      <p>{todo.title}</p>
-      <p>{todo.description}</p>
+      <p>{todo?.title || 'create'}</p>
+      <p>{todo?.description || 'create'}</p>
     </Layout>
   );
 }
