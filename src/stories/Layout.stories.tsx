@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import type { ReactNode } from 'react';
 
-import { Layout, LayoutProps } from '../components/Layout';
+import { Layout, LayoutProps } from 'src/components/Layout';
 
 export default {
   title: 'Example/Layout',

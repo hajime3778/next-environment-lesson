@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Todo } from 'src/models/Todo';
 
-import { TodoItem, Props } from '../components/TodoItem';
+import { TodoItem, Props } from 'src/components/TodoItem';
 
 export default {
   title: 'Example/TodoItem',
