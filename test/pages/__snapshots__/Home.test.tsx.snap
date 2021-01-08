@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering Matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Layout__Contents-sc-1lp7j94-0 dkiwWK"
+  >
+    <header>
+      <h1
+        class="Header__Title-sc-1sdc6nh-0 enaHpz"
+      >
+        Title 
+        <a
+          class="Header__RegisterButton-sc-1sdc6nh-1 TIrjt"
+        >
+          +
+        </a>
+      </h1>
+    </header>
+    <main>
+      <div
+        class="TodoItem__TodoArea-sc-1hlcusr-0 bVeSQG"
+      >
+        <div
+          class="TodoItem__TodoTitle-sc-1hlcusr-1 cCpdRs"
+        >
+          Sample title1
+        </div>
+        <div
+          class="TodoItem__TodoDescription-sc-1hlcusr-2 dEfwVe"
+        >
+          Sample description1
+        </div>
+      </div>
+      <div
+        class="TodoItem__TodoArea-sc-1hlcusr-0 bVeSQG"
+      >
+        <div
+          class="TodoItem__TodoTitle-sc-1hlcusr-1 cCpdRs"
+        >
+          Sample title2
+        </div>
+        <div
+          class="TodoItem__TodoDescription-sc-1hlcusr-2 dEfwVe"
+        >
+          Sample description2
+        </div>
+      </div>
+    </main>
+  </div>
+</DocumentFragment>
+`;
