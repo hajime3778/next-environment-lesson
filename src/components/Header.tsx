@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const Title = styled.h1`
@@ -35,15 +34,14 @@ const RegisterButton = styled.a`
 export type HeaderProps = {
   title: string;
   visibleRegister?: boolean;
+  registerClick?: () => void;
 };
 
-export const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
-  const router = useRouter();
+export const Header: React.FC<HeaderProps> = ({ title, visibleRegister, registerClick }) => {
   return (
     <header>
       <Title>
-        {props.title}{' '}
-        {props.visibleRegister && <RegisterButton onClick={() => router.push('/create-todo')}>+</RegisterButton>}
+        {title} {visibleRegister && <RegisterButton onClick={registerClick}>+</RegisterButton>}
       </Title>
     </header>
   );

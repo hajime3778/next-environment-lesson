@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import type { ReactNode } from 'react';
 import styled from 'styled-components';
 import { Header } from './Header';
@@ -15,10 +16,15 @@ export type LayoutProps = {
 };
 
 export const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
+  const router = useRouter();
   return (
     <>
       <Contents>
-        <Header title={props.title} visibleRegister={props.visibleRegister} />
+        <Header
+          title={props.title}
+          visibleRegister={props.visibleRegister}
+          registerClick={() => router.push('/create-todo')}
+        />
         <main>{props.children}</main>
       </Contents>
     </>
