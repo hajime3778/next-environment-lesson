@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { Layout } from 'src/components/Layout';
 import { TodoListContext } from 'src/context/TodoContext';
 
-export default function TodoEdit() {
+const TodoEdit = () => {
   const router = useRouter();
   const id = parseInt(router.query.id as string);
   const { todoList } = useContext(TodoListContext);
@@ -15,4 +15,6 @@ export default function TodoEdit() {
       <p>{todo?.description || 'create'}</p>
     </Layout>
   );
-}
+};
+
+export default TodoEdit;
