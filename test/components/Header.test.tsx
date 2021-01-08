@@ -21,7 +21,9 @@ describe('Rendering', () => {
     expect(screen.getByText('Title')).toBeTruthy();
     expect(screen.getByText('+')).toBeTruthy();
   });
+});
 
+describe('Button onclick event', () => {
   it('Should trigger register button', () => {
     const mockFunction = jest.fn();
     render(<Header title="Title" visibleRegister={true} registerClick={mockFunction} />);

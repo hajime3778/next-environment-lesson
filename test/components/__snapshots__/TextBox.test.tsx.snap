@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering Matches snapshot 1`] = `
+<DocumentFragment>
+  <input
+    class="TextBox__StyledText-lbjadk-0 kPaMvE"
+    placeholder="sample"
+    type="text"
+    value=""
+  />
+</DocumentFragment>
+`;

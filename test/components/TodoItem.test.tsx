@@ -16,11 +16,13 @@ describe('Rendering', () => {
     const { asFragment } = render(<TodoItem todo={sampleTodo} />, {});
     expect(asFragment()).toMatchSnapshot();
   });
+});
 
+describe('Button onclick event', () => {
   it('Should trigger click todo', () => {
     const mockFunction = jest.fn();
     render(<TodoItem todo={sampleTodo} onClick={mockFunction} />);
-    userEvent.click(screen.getByText('+'));
+    userEvent.click(screen.getByText('Sample title'));
     expect(mockFunction).toHaveBeenCalledTimes(1);
   });
 });

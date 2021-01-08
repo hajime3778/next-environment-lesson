@@ -9,11 +9,13 @@ describe('Rendering', () => {
     const { asFragment } = render(<Button primary={true} label="Button" />, {});
     expect(asFragment()).toMatchSnapshot();
   });
+});
 
+describe('Button onclick event', () => {
   it('Should trigger button', () => {
     const mockFunction = jest.fn();
     render(<Button primary={true} label="Button" onClick={mockFunction} />);
-    userEvent.click(screen.getByRole('button'));
+    userEvent.click(screen.getByText('Button'));
     expect(mockFunction).toHaveBeenCalledTimes(1);
   });
 });
