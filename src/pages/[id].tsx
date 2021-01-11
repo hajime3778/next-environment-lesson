@@ -13,6 +13,8 @@ const TodoEdit = () => {
   const [title, setTitle] = useState(todo?.title || '');
   const [description, setDescription] = useState(todo?.description || '');
 
+  const isCreate = true;
+
   const titleChanged = (e: ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
   };
@@ -24,8 +26,11 @@ const TodoEdit = () => {
     <Layout title="TodoEdit">
       <TextBox value={title} placeholder="Title" onChange={titleChanged} />
       <TextBox value={description} placeholder="Description" onChange={descriptionChanged} />
-      <br />
-      <Button style={{ width: '90%' }} primary={true} label="Save" />
+      {isCreate ? (
+        <Button style={{ width: '90%' }} primary={true} label="Create" />
+      ) : (
+        <Button style={{ width: '90%' }} primary={true} label="Save" />
+      )}
     </Layout>
   );
 };
