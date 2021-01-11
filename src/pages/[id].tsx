@@ -1,6 +1,7 @@
 import { useContext, useState, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 import { Layout } from 'src/components/Layout';
+import { Button } from 'src/components/Button';
 import { TextBox } from 'src/components/TextBox';
 import { TodoListContext } from 'src/context/TodoContext';
 
@@ -23,6 +24,8 @@ const TodoEdit = () => {
     <Layout title="TodoEdit">
       <TextBox value={title} placeholder="Title" onChange={titleChanged} />
       <TextBox value={description} placeholder="Description" onChange={descriptionChanged} />
+      <br />
+      <Button style={{ width: '90%' }} primary={true} label="Save" />
     </Layout>
   );
 };

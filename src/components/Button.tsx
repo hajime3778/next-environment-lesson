@@ -7,8 +7,10 @@ const StyledButton = styled.a<ButtonStyleProps>`
   border: 0;
   border-radius: 3em;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   line-height: 1;
+  text-align: center;
+  width: 100px;
   ${(props: ButtonStyleProps) =>
     props.primary
       ? css`
@@ -42,6 +44,7 @@ export type ButtonStyleProps = {
   primary?: boolean;
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
+  style?: React.CSSProperties;
 };
 
 export type ButtonProps = {

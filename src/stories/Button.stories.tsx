@@ -34,3 +34,10 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+
+export const Styled = Template.bind({});
+Styled.args = {
+  primary: true,
+  style: { background: 'red' },
+  label: 'Button',
+};
