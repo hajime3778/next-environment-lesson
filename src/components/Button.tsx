@@ -7,7 +7,7 @@ const StyledButton = styled.a<ButtonStyleProps>`
   border: 0;
   border-radius: 3em;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   line-height: 1;
   text-align: center;
   width: 100px;

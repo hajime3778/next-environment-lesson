@@ -9,7 +9,7 @@ export type Props = {
 };
 
 const StyledText = styled.input`
-  width: 90%;
+  width: 100%;
   border-radius: 10px;
   font-size: 18px;
   border: 1px solid #dfdfdf;
