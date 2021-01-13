@@ -25,7 +25,6 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <meta name="author" content="Curry Lover" />
-          <link rel="stylesheet" href="/static/reset.css" />
         </Head>
         <body>
           <Main />
