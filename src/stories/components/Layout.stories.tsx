@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import { Layout, LayoutProps } from 'src/components/Layout';
 
 export default {
-  title: 'Example/Layout',
+  title: 'Components/Layout',
   component: Layout,
 } as Meta;
 

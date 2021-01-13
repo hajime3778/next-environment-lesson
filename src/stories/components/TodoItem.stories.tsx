@@ -4,7 +4,7 @@ import { Todo } from 'src/models/Todo';
 import { TodoItem, Props } from 'src/components/TodoItem';
 
 export default {
-  title: 'Example/TodoItem',
+  title: 'Components/TodoItem',
   component: TodoItem,
 } as Meta;
 
