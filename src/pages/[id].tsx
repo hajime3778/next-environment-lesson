@@ -12,13 +12,14 @@ const TodoEdit = () => {
   const initTodo: Todo = { id: 0, title: '', description: '' };
   const [todo, setTodo] = useState<Todo>(initTodo);
 
-  const isCreate = router.query.id === 'create-todo';
+  const queryId = router.query.id == null ? '' : (router.query.id as string);
+  const isCreate = queryId === 'create-todo';
 
   useEffect(() => {
-    const id = parseInt(router.query.id as string);
+    const id = parseInt(queryId);
     const newTodo = todoList.find((todo) => todo.id === id);
     setTodo(newTodo);
-  }, [setTodo, todoList, router.query.id]);
+  }, [setTodo, todoList, queryId]);
 
   const titleChanged = (e: ChangeEvent<HTMLInputElement>) => {
     const newTodo = Object.assign({}, todo);
@@ -64,21 +65,23 @@ const TodoEdit = () => {
       <div style={{ textAlign: 'center' }}>
         <TextBox value={todo?.title || ''} placeholder="Title" onChange={titleChanged} />
         <TextBox value={todo?.description || ''} placeholder="Description" onChange={descriptionChanged} />
-        <div style={{ textAlign: 'center' }}>
-          {isCreate ? (
-            <Button style={{ width: '90%' }} primary={true} label="Create" onClick={createClicked} />
-          ) : (
-            <Fragment>
-              <Button style={{ width: '42%' }} primary={true} label="Save" onClick={updateClicked} />
-              <Button
-                style={{ marginLeft: '10px', width: '42%', backgroundColor: '#dc143c' }}
-                primary={true}
-                label="Delete"
-                onClick={deleteClicked}
-              />
-            </Fragment>
-          )}
-        </div>
+        {router.query.id && (
+          <div style={{ textAlign: 'center' }}>
+            {isCreate ? (
+              <Button style={{ width: '90%' }} primary={true} label="Create" onClick={createClicked} />
+            ) : (
+              <Fragment>
+                <Button style={{ width: '42%' }} primary={true} label="Save" onClick={updateClicked} />
+                <Button
+                  style={{ marginLeft: '10px', width: '42%', backgroundColor: '#dc143c' }}
+                  primary={true}
+                  label="Delete"
+                  onClick={deleteClicked}
+                />
+              </Fragment>
+            )}
+          </div>
+        )}
       </div>
     </Layout>
   );
