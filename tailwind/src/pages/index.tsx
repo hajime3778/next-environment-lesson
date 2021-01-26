@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 // import { Layout } from 'src/components/layout';
+//import resolveConfig from 'tailwindcss/resolveConfig';
 
 const Home = () => {
   const [isClosed, setClosed] = useState(false);
@@ -42,50 +43,51 @@ const Home = () => {
 
         <main className="flex-grow flex flex-col min-h-screen">
           <header className="bg-white border-b h-10 flex items-center justify-center">
-            {isClosed ? (
-              <button
-                tabIndex="1"
-                className="w-10 p-1"
-                aria-label="Open menu"
-                title="Open menu"
-                onClick={() => {
-                  return setClosed(false);
-                }}
-              >
-                <svg
-                  aria-hidden="true"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+            {!isStatic &&
+              (isClosed ? (
+                <button
+                  tabIndex="1"
+                  className="w-10 p-1"
+                  aria-label="Open menu"
+                  title="Open menu"
+                  onClick={() => {
+                    return setClosed(false);
+                  }}
                 >
-                  <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
-            ) : (
-              <button
-                tabIndex="1"
-                className="w-10 p-1"
-                aria-label="Close menu"
-                title="Close menu"
-                onClick={() => {
-                  return setClosed(true);
-                }}
-              >
-                <svg
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </button>
+              ) : (
+                <button
+                  tabIndex="1"
+                  className="w-10 p-1"
+                  aria-label="Close menu"
+                  title="Close menu"
+                  onClick={() => {
+                    return setClosed(true);
+                  }}
                 >
-                  <path d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              </button>
-            )}
+                  <svg
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              ))}
 
             <div className="flex flex-grow items-center justify-between px-3">
               <h1 className="text-lg">Home</h1>
