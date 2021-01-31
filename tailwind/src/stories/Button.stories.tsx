@@ -1,9 +1,12 @@
-import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
+import type { Meta, Story } from '@storybook/react/types-6-0';
+// eslint-disable-next-line no-restricted-imports
+import React from 'react';
 
-import { Button, ButtonProps } from './Button';
+import type { ButtonProps } from './Button';
+import { Button } from './Button';
 
+// eslint-disable-next-line import/no-default-export
 export default {
   title: 'Example/Button',
   component: Button,
@@ -12,7 +15,9 @@ export default {
   },
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => {
+  return <Button {...args} />;
+};
 
 export const Primary = Template.bind({});
 Primary.args = {
