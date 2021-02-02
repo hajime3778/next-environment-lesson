@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 // import { Layout } from 'src/components/layout';
 //import resolveConfig from 'tailwindcss/resolveConfig';
 
-const Home = () => {
+export const Home = () => {
   const [isClosed, setClosed] = useState(false);
   const isStatic = useMediaQuery({
     query: '(min-width: 640px)',
