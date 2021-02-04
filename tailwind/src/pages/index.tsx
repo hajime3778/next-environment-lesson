@@ -21,19 +21,19 @@ export const Home = () => {
               <nav>
                 <ul>
                   <li className="p-3">
-                    <a href=""> Home </a>
+                    <a> Home </a>
                   </li>
                   <li className="p-3">
-                    <a href=""> Profile </a>
+                    <a> Profile </a>
                   </li>
                   <li className="p-3">
-                    <a href=""> Portfolio </a>
+                    <a> Portfolio </a>
                   </li>
                   <li className="p-3">
-                    <a href=""> Contact </a>
+                    <a> Contact </a>
                   </li>
                   <li className="p-3">
-                    <a href=""> About </a>
+                    <a> About </a>
                   </li>
                 </ul>
               </nav>
@@ -46,7 +46,6 @@ export const Home = () => {
             {!isStatic &&
               (isClosed ? (
                 <button
-                  tabIndex="1"
                   className="w-10 p-1"
                   aria-label="Open menu"
                   title="Open menu"
@@ -68,7 +67,6 @@ export const Home = () => {
                 </button>
               ) : (
                 <button
-                  tabIndex="1"
                   className="w-10 p-1"
                   aria-label="Close menu"
                   title="Close menu"

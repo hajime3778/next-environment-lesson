@@ -12,5 +12,8 @@
   "editor.formatOnSave": false,
   "[css]": {
     "editor.formatOnSave": true
-  }
+  },
+  "cSpell.words": [
+    "tailwindcss"
+  ]
 }
